@@ -8,34 +8,44 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>springboot-demo</artifactId>
+    <artifactId>gl-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-demo</name>
+    <name>gl-demo</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>
+        <gl.version>1.0-SNAPSHOT</gl.version>
     </properties>
 
     <dependencies>
+
+        <!--自己的模块组件-->
+
+        <dependency>
+            <groupId>com.greelee</groupId>
+            <artifactId>gl-tool.util</artifactId>
+            <version>${gl.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.greelee</groupId>
+            <artifactId>gl-tool.component</artifactId>
+            <version>${gl.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.greelee</groupId>
+            <artifactId>gl-log</artifactId>
+            <version>${gl.version}</version>
+        </dependency>
+
+
             <!--spring boot start-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
-                <!--<exclusions>-->
-                <!--<exclusion>-->
-                <!--<groupId>org.springframework.boot</groupId>-->
-                <!--<artifactId>spring-boot-starter-tomcat</artifactId>-->
-                <!--</exclusion>-->
-                <!--</exclusions>-->
             </dependency>
-
-            <!--<dependency>-->
-            <!--<groupId>org.apache.tomcat</groupId>-->
-            <!--<artifactId>tomcat-servlet-api</artifactId>-->
-            <!--<version>9.0.14</version>-->
-            <!--<scope>provided</scope>-->
-            <!--</dependency>-->
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>
